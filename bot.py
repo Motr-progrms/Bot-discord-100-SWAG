@@ -11,7 +11,7 @@ intents = discord.Intents.default()
 intents.members = True
 intents.message_content = True
 intents.voice_states = True
-
+TOKEN = os.getenv("BOT_TOKEN")
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # --- ID СЕРВЕРА ---
@@ -674,4 +674,4 @@ async def on_voice_state_update(member: discord.Member, before: discord.VoiceSta
 
 
 # --- ЗАПУСК БОТА ---
-bot.run("MTUzODY3OTU1NTY3MjUwNjQ5MA.GYlfXE.Op2DmJtlNIdGsdKzvYxM6DxM6sCoUyobbde-t8")
+bot.run(TOKEN)
